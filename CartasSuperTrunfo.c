@@ -1,90 +1,36 @@
-#include <stdio.h>
-
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
+#include<stdio.h>
 
 int main(){
 
 // variaves
+//primeira carta
 
-char Estado[2];
-char Codigo_da_carta[4];
-char Nome_da_cidade[15];
-int Populacao;
-float Area_em_KM;
-float PIB;
-int numero_de_pontos;
+char Estado[2] = "A";
+char Codigo_da_carta[4] = "A01";
+char Nome_da_cidade[15] = "São paulo";
+int Populacao = 12325000;
+float Area_em_KM = 1521.11;
+float PIB = 699.28;
+int numero_de_pontos = 50;
 float densidade_populacional;
 float pib_per_capita;
 float Super_poder;
 
 /// segunda carta
 
-char Estado2[2];
-char Codigo_da_carta2[4];
-char Nome_da_cidade2[15];
-int Populacao2;
-float Area_em_KM2;
-float PIB2;
-int numero_de_pontos2;
+char Estado2[2] = "B";
+char Codigo_da_carta2[4] =  "B02";
+char Nome_da_cidade2[15] = "Rio de Janeiro";
+int Populacao2 = 6748000;
+float Area_em_KM2 = 1200.25;
+float PIB2 = 300.50;
+int numero_de_pontos2 = 30;
 float densidade_populacional2;
 float pib_per_capita2;
 float Super_poder2;
 
-//entrada de dados
 
-printf("Desafio Cartas super trunfos!\n");
-printf("Digite a Primeira carta!\n");
-
-printf("Estado:  ");
-scanf("%s", &Estado);
-
-printf("Codigo:  ");
-scanf("%s", &Codigo_da_carta);
-
-printf("Nome da cidade:  ");
-scanf("%s", &Nome_da_cidade);
-
-printf("População:  ");
-scanf("%d", &Populacao);
-
-printf("Digite a Área:  ");
-scanf("%f", &Area_em_KM);
-
-printf("Digite o PIB:  ");
-scanf("%f", &PIB);
-
-printf("Número de Pontos Turísticos:  \n");
-scanf("%d", &numero_de_pontos);
-
-//segunda carta
-
-printf("Digite a Segunda carta!\n");
-
-printf("Estado:  ");
-scanf("%s", &Estado2);
-
-printf("Codigo:  ");
-scanf("%s", &Codigo_da_carta2);
-
-printf("Nome da cidade:  ");
-scanf("%s", &Nome_da_cidade2);
-
-printf("População:  ");
-scanf("%d", &Populacao2);
-
-printf("Digite a Área:  ");
-scanf("%f", &Area_em_KM2);
-
-printf("Digite o PIB:  ");
-scanf("%f", &PIB2);
-
-printf("Número de Pontos Turísticos:  ");
-scanf("%d", &numero_de_pontos2);
-
+//DIVISÕES!!
 //divisão carta 1
 
 densidade_populacional = (float) Populacao / Area_em_KM;
@@ -101,58 +47,142 @@ pib_per_capita2 = PIB2 / Populacao2;
 
 Super_poder2 = (float) Area_em_KM2 + PIB2 + pib_per_capita2 + 1 / densidade_populacional2 + numero_de_pontos2;
 
-//saida de dados
 
-//carta 1
-printf("RESULTADO DA CARTA 1!\n");
-printf("Estado: %s\nCódigo da carta: %s\n", Estado, Codigo_da_carta);
 
-printf("Nome da Cidade: %s\nPopulação: %d\n", Nome_da_cidade, Populacao);
+//entrada de dados
+//Primeira carta
 
-printf("Área em KM: %.2f\nPIB: %.2f\n", Area_em_KM, PIB);
+printf("Desafio Cartas super trunfos!\n");
+printf("Informações da Carta São paulo!\n");
+
+printf("Estado: %s\n", Estado);
+
+printf("Codigo da Carta: %s\n", Codigo_da_carta);
+
+printf("Nome da cidade: %s\n", Nome_da_cidade);
+
+printf("População: %d\n", Populacao);
+
+printf("Área: %.2f\n", Area_em_KM);
+
+printf("PIB: %.2f\n", PIB);
 
 printf("Número de Pontos Turísticos: %d\n", numero_de_pontos);
 
-printf("Densidade populacional: %.2f\n", densidade_populacional);
+printf("Densidade Populacinal: %.2f\n", densidade_populacional);
 
-printf("PIB per capita: %.2f\n", pib_per_capita);
+printf("PIB per Capita: %f\n", pib_per_capita);
 
-printf ("Super poder da carta: %f\n", Super_poder);
+printf("Super poder: %.3f\n", Super_poder);
 
+//aparencia
+printf("//////////////////////////////////////////////////////////////////////////////////////////\n");
+//////////////
 
-//carta 2
-printf("RESULTADO DA CARTA 2!\n");
-printf("Estado: %s\nCódigo da carta: %s\n", Estado2, Codigo_da_carta2);
+//segunda carta
 
-printf("Nome da Cidade: %s\nPopulação: %d\n", Nome_da_cidade2, Populacao2);
+printf("Informações da Carta Rio de Janeiro!\n");
 
-printf("Área em KM: %.2f\nPIB: %.2f\n", Area_em_KM2, PIB2);
+printf("Estado: %s\n", Estado2);
+
+printf("Codigo da Carta: %s\n", Codigo_da_carta2);
+
+printf("Nome da cidade: %s\n", Nome_da_cidade2);
+
+printf("População: %d\n", Populacao2);
+
+printf("Área: %.2f\n", Area_em_KM2);
+
+printf("PIB: %.2f\n", PIB2);
 
 printf("Número de Pontos Turísticos: %d\n", numero_de_pontos2);
 
-printf("Densidade populacional: %.2f\n", densidade_populacional2);
+printf("Densidade Populacinal: %.2f\n", densidade_populacional2);
 
-printf("PIB per capita: %.2f\n", pib_per_capita2);
+printf("PIB per Capita: %f\n", pib_per_capita2);
 
-printf ("Super poder da carta: %f\n", Super_poder2);
+printf("Super poder: %.3f\n", Super_poder2);
+
+//aparencia
+printf("//////////////////////////////////////////////////////////////////////////////////////////\n");
+///////////////////////
 
 //COMPARAÇÃO DAS CARTAS
 
-printf("TODOS QUE APARECER (1) A CARTA 1 GANHOU, TODOS QUE APARECER (0)A CARTA 2 GANHOU!\n");
+printf("RESULTADO DO JOGO!\n");
 
-printf("Poulação: %d\n", Populacao > Populacao2);
 
-printf("Aréa: %d\n", Area_em_KM > Area_em_KM2);
+if (Populacao > Populacao2)
+{
+    printf("População: São paulo venceu!\n");
+}
+else
+{
+    printf("População: Rio de Janeiro venceu!\n");
+}
+/////////////////////////////////////////////////
 
-printf("PIB: %d\n", PIB > PIB2);
+if (Area_em_KM > Area_em_KM2)
+{
+    printf("Área em KM: São paulo venceu!\n");
+}
+else
+{
+    printf("Área em KM: Rio de Janeiro venceu!\n");
+}
+/////////////////////////////////////
 
-printf("Pontos Turísticos: %d\n", numero_de_pontos > numero_de_pontos2);
+if (PIB > PIB2)
+{
+    printf("PIB: São paulo venceu!\n");
+}
+else
+{
+    printf("PIB: Rio de Janeiro venceu!\n");
+}
+/////////////////////////////////////////////
 
-printf("Densidade Populacional: %d\n", densidade_populacional < densidade_populacional2);
+if (numero_de_pontos > numero_de_pontos2)
+{
+    printf("Número de Pontos Turísticos: São paulo venceu!\n");
+}
+else
+{
+    printf("Número de Pontos Turísticos: Rio de Janeiro venceu!\n");
+}
+////////////////////////////////////////////////
 
-printf("Pib per capita: %d\n", pib_per_capita > pib_per_capita2);
+if (densidade_populacional < densidade_populacional2)
+{
+    printf("Densidade Populacinal: São paulo venceu!\n");
+}
+else
+{
+    printf("Densidade Populacinal: Rio de Janeiro venceu!\n");
+}
+/////////////////////////////////////////////
 
-printf("Super poder: %d\n", Super_poder > Super_poder2);
+if (pib_per_capita > pib_per_capita2)
+{
+    printf("PIB per capita: São paulo venceu!\n");
+}
+else
+{
+    printf("PIB per capita: Rio de Janeiro venceu\n");
+}
+//////////////////////////////////////////////////////
+
+if (Super_poder > Super_poder2)
+{
+    printf("Super Poder: São paulo venceu!\n");
+}
+else
+{
+    printf("Super Poder: Rio de Janeiro venceu\n");
+}
+
+
+
 
 return 0;
 
