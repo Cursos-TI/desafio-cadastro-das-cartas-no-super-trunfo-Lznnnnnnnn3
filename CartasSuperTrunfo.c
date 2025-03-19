@@ -3,8 +3,8 @@
 int main(){
 
 // variaves
-//primeira carta
 
+int escolhadaCARTA;
 char Estado[2] = "A";
 char Codigo_da_carta[4] = "A01";
 char Nome_da_cidade[15] = "São paulo";
@@ -29,8 +29,6 @@ float densidade_populacional2;
 float pib_per_capita2;
 float Super_poder2;
 
-
-//DIVISÕES!!
 //divisão carta 1
 
 densidade_populacional = (float) Populacao / Area_em_KM;
@@ -49,10 +47,10 @@ Super_poder2 = (float) Area_em_KM2 + PIB2 + pib_per_capita2 + 1 / densidade_popu
 
 
 
-//entrada de dados
-//Primeira carta
+//Informações da carta
 
 printf("Desafio Cartas super trunfos!\n");
+printf("Sua Carta é o São paulo\n");
 printf("Informações da Carta São paulo!\n");
 
 printf("Estado: %s\n", Estado);
@@ -75,111 +73,148 @@ printf("PIB per Capita: %f\n", pib_per_capita);
 
 printf("Super poder: %.3f\n", Super_poder);
 
-//aparencia
-printf("//////////////////////////////////////////////////////////////////////////////////////////\n");
-//////////////
+printf("/////////////////////////////////////////////////////////////\n");
 
-//segunda carta
+//Entrada de dados da escolha da carta
+printf("Escolha uma das caracterisca para usar como comparação\n");
+printf("1. População\n");
+printf("2. Área\n");
+printf("3. PIB\n");
+printf("4. Numero de Pontos Turísticos\n");
+printf("5. Densidade populacional\n");
+printf("6. PIB per Capita\n");
+printf("7. Super Poder\n");
+scanf("%d", &escolhadaCARTA);
 
-printf("Informações da Carta Rio de Janeiro!\n");
+//Comparações das caracteristicas
 
-printf("Estado: %s\n", Estado2);
-
-printf("Codigo da Carta: %s\n", Codigo_da_carta2);
-
-printf("Nome da cidade: %s\n", Nome_da_cidade2);
-
-printf("População: %d\n", Populacao2);
-
-printf("Área: %.2f\n", Area_em_KM2);
-
-printf("PIB: %.2f\n", PIB2);
-
-printf("Número de Pontos Turísticos: %d\n", numero_de_pontos2);
-
-printf("Densidade Populacinal: %.2f\n", densidade_populacional2);
-
-printf("PIB per Capita: %f\n", pib_per_capita2);
-
-printf("Super poder: %.3f\n", Super_poder2);
-
-//aparencia
-printf("//////////////////////////////////////////////////////////////////////////////////////////\n");
-///////////////////////
-
-//COMPARAÇÃO DAS CARTAS
-
-printf("RESULTADO DO JOGO!\n");
-
-
-if (Populacao > Populacao2)
+switch (escolhadaCARTA)
 {
-    printf("População: São paulo venceu!\n");
-}
-else
-{
-    printf("População: Rio de Janeiro venceu!\n");
-}
-/////////////////////////////////////////////////
+case 1:
+    printf("População selionada, Comparando...\n");
+    if (Populacao > Populacao2)
+    {
+        printf("Você venceu!");
+    }
+    else if (Populacao ==  Populacao2)
+    {
+        printf("Você empatou");
+    }
+    else
+    {
+        printf("Você perdeu!");
+    }
+    
 
-if (Area_em_KM > Area_em_KM2)
-{
-    printf("Área em KM: São paulo venceu!\n");
-}
-else
-{
-    printf("Área em KM: Rio de Janeiro venceu!\n");
-}
-/////////////////////////////////////
+    break;
 
-if (PIB > PIB2)
-{
-    printf("PIB: São paulo venceu!\n");
-}
-else
-{
-    printf("PIB: Rio de Janeiro venceu!\n");
-}
-/////////////////////////////////////////////
+    case 2:
+    printf("Área selionada, Comparando...\n");
+    if (Area_em_KM > Area_em_KM2)
+    {
+        printf("Você venceu!\n");
+    }
+    else if (Area_em_KM ==  Area_em_KM2)
+    {
+        printf("Você empatou\n");
+    }
+    else
+    {
+        printf("Você perdeu!\n");
+    }
 
-if (numero_de_pontos > numero_de_pontos2)
-{
-    printf("Número de Pontos Turísticos: São paulo venceu!\n");
-}
-else
-{
-    printf("Número de Pontos Turísticos: Rio de Janeiro venceu!\n");
-}
-////////////////////////////////////////////////
+    break;
 
-if (densidade_populacional < densidade_populacional2)
-{
-    printf("Densidade Populacinal: São paulo venceu!\n");
-}
-else
-{
-    printf("Densidade Populacinal: Rio de Janeiro venceu!\n");
-}
-/////////////////////////////////////////////
+    case 3:
+    printf("PIB selionada, Comparando...\n");
 
-if (pib_per_capita > pib_per_capita2)
-{
-    printf("PIB per capita: São paulo venceu!\n");
-}
-else
-{
-    printf("PIB per capita: Rio de Janeiro venceu\n");
-}
-//////////////////////////////////////////////////////
+    if (PIB > PIB2)
+    {
+        printf("Você venceu!\n");
+    }
+    else if (PIB ==  PIB2)
+    {
+        printf("Você empatou\n");
+    }
+    else
+    {
+        printf("Você perdeu!\n");
+    }
 
-if (Super_poder > Super_poder2)
-{
-    printf("Super Poder: São paulo venceu!\n");
+    break;
+
+    case 4:
+    printf("Numero de Pontos Turísticos selionada, Comparando...\n");
+    if (numero_de_pontos > numero_de_pontos2)
+    {
+        printf("Você venceu!\n");
+    }
+    else if (numero_de_pontos ==  numero_de_pontos2)
+    {
+        printf("Você empatou\n");
+    }
+    else
+    {
+        printf("Você perdeu!\n");
+    }
+
+    break;
+
+    case 5:
+    printf("Densidade Populacional selionada, Comparando...\n");
+    if (densidade_populacional < densidade_populacional2)
+    {
+        printf("Você venceu!\n");
+    }
+    else if (densidade_populacional ==  densidade_populacional2)
+    {
+        printf("Você empatou\n");
+    }
+    else
+    {
+        printf("Você perdeu!\n");
+    }
+
+    break;
+
+    case 6:
+    printf("PIB per capita selionada, Comparando...\n");
+    if (pib_per_capita > pib_per_capita2)
+    {
+        printf("Você venceu!\n");
+    }
+    else if (pib_per_capita ==  pib_per_capita2)
+    {
+        printf("Você empatou\n");
+    }
+    else
+    {
+        printf("Você perdeu!\n");
+    }
+
+    break;
+
+    case 7:
+    printf("Super Poder selionada, Comparando...\n");
+    if (Super_poder > Super_poder2)
+    {
+        printf("Você venceu!\n");
+    }
+    else if (Super_poder == Super_poder2)
+    {
+        printf("Você empatou\n");
+    }
+    else
+    {
+        printf("Você perdeu!\n");
+    }
+    break;
+
+default: 
+printf("Opção invalida\n");
+    break;
 }
-else
-{
-    printf("Super Poder: Rio de Janeiro venceu\n");
-}
+
 
 
 
